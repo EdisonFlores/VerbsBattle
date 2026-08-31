@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  
+  <title>Modo Clásico</title>
+  <link rel="icon" href="assets/img/ui/logo.png" type="image/png" />
+
+  <link rel="stylesheet" href="css/vendor/bootstrap-grid.min.css?v=e670c73068b2" />
+  <link rel="stylesheet" href="css/tailwind-built.css?v=110a6c839e7d" />
+  <link rel="stylesheet" href="css/theme.css?v=b381298eb77d" />
+  <meta name="theme-color" content="#ffb34d" />
+  <link rel="manifest" href="manifest.webmanifest" />
+  <link rel="apple-touch-icon" href="assets/icons/icon-180.png" />
+</head>
+<body class="page-game-classic tw-min-h-screen tw-antialiased">
+<a class="skip-link" href="#main-content">Saltar al contenido</a>
+<header class="site-header"><a class="brand" href="index.html"><img src="assets/img/ui/logo.png" alt="" width="54" height="54"/><span>VERB BATTLE<small>Aprende · Practica · Compite</small></span></a><nav class="site-nav" aria-label="Navegación principal"><a href="index.html">Inicio</a><a href="mode-select.html">Modos</a><a href="study.html">Estudio</a><a href="profile.html">Mi progreso</a></nav></header>
+
+  <main id="main-content" class="app-shell">
+    <header>
+      <h1>Modo Clásico</h1>
+      <p id="selected-difficulty-display"></p>
+    </header>
+    <p id="round-progress" role="status">Preparando partida…</p>
+
+    <section class="player-info">
+      <img id="player-avatar" class="player-avatar" src="" alt="Avatar del jugador">
+      <span id="player-name-display" class="player-name"></span>
+      <div class="player-score">
+        <span class="label">Puntaje:</span>
+        <span id="player-score-value" class="value">0</span>
+      </div>
+    </section>
+
+    <div id="score-animation" class="score-change"></div>
+
+    <section id="game">
+      <div class="verb-container">
+        <h2 id="verb">Verbo</h2>
+      </div>
+      <p id="feedback" role="status" aria-live="polite" class="feedback"></p>
+
+      <div class="answer-section">
+        <label for="answer">Tu respuesta · tres formas separadas por espacios</label>
+        <input type="text" id="answer" placeholder="(infinitivo [space] pasado [space] participio)" autocomplete="off" />
+        <div class="button-group">
+          <button id="submit-answer" class="btn">Enviar Respuesta</button>
+          <button id="next-verb" class="btn" style="display:none">Siguiente Verbo</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="end-game">
+      <a href="profile.html">Salir y ver mi progreso</a>
+    </section>
+  </main>
+  
+<footer class="site-footer"><span>VERB BATTLE</span> · Un verbo más, un paso adelante.</footer>
+  <script src="js/game-utils.js?v=ea4417e37819"></script>
+  <script src="js/progression.js?v=36ad1f6ee211"></script>
+  <script src="js/profile-store.js?v=4b922e94d755"></script>
+  <script src="js/game-classic.js?v=1d877a3d024b"></script>
+  <script src="js/achievement-notices.js?v=faeaec19f7c9"></script>
+  <script src="js/responsive-layout.js?v=9f372ad5d68a"></script>
+  <script src="js/pwa.js?v=0de1677da6a0"></script>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>Examen Personalizado - Selección de Verbos</title>
+  <link rel="icon" href="assets/img/ui/logo.png" type="image/png" />
+
+  <link rel="stylesheet" href="css/vendor/bootstrap-grid.min.css?v=e670c73068b2" />
+  <link rel="stylesheet" href="css/tailwind-built.css?v=110a6c839e7d" />
+  <link rel="stylesheet" href="css/theme.css?v=b381298eb77d" />
+  <meta name="theme-color" content="#ffb34d" />
+  <link rel="manifest" href="manifest.webmanifest" />
+  <link rel="apple-touch-icon" href="assets/icons/icon-180.png" />
+</head>
+<body class="page-exam-select tw-min-h-screen tw-antialiased">
+<a class="skip-link" href="#main-content">Saltar al contenido</a>
+<header class="site-header"><a class="brand" href="index.html"><img src="assets/img/ui/logo.png" alt="" width="54" height="54"/><span>VERB BATTLE<small>Aprende · Practica · Compite</small></span></a><nav class="site-nav" aria-label="Navegación principal"><a href="index.html">Inicio</a><a href="mode-select.html">Modos</a><a href="study.html">Estudio</a><a href="profile.html">Mi progreso</a></nav></header>
+<main id="main-content" class="app-shell">
+
+  <h1>🧠 Examen Personalizado</h1>
+  <p><label for="exam-player">Registrar examen para:</label> <select id="exam-player"></select></p>
+  <p>Escribe en español para buscar y seleccionar los verbos que desees practicar.</p>
+
+  <input id="searchInput" type="text" placeholder="Buscar verbo en español..." />
+
+  <div class="verb-list" id="verbList"></div>
+
+  <div id="selected">
+    <h3>✅ Verbos seleccionados:</h3>
+    <ul id="selectedList"></ul>
+  </div>
+
+  <button class="btn-start" id="startExam">Comenzar examen</button>
+  
+</main>
+
+<footer class="site-footer"><span>VERB BATTLE</span> · Un verbo más, un paso adelante.</footer>
+  <script src="js/game-utils.js?v=ea4417e37819"></script>
+  <script src="js/progression.js?v=36ad1f6ee211"></script>
+  <script src="js/profile-store.js?v=4b922e94d755"></script>
+  <script src="js/game-exam.js?v=274292595368"></script>
+  <script src="js/responsive-layout.js?v=9f372ad5d68a"></script>
+  <script src="js/pwa.js?v=0de1677da6a0"></script>
+</body>
+</html>

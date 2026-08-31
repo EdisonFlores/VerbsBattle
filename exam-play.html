@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <title>Examen Personalizado</title>
+  <link rel="icon" href="assets/img/ui/logo.png" type="image/png" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+
+  <link rel="stylesheet" href="css/vendor/bootstrap-grid.min.css?v=e670c73068b2" />
+  <link rel="stylesheet" href="css/tailwind-built.css?v=110a6c839e7d" />
+  <link rel="stylesheet" href="css/theme.css?v=b381298eb77d" />
+  <meta name="theme-color" content="#ffb34d" />
+  <link rel="manifest" href="manifest.webmanifest" />
+  <link rel="apple-touch-icon" href="assets/icons/icon-180.png" />
+</head>
+<body class="page-exam-play tw-min-h-screen tw-antialiased">
+<a class="skip-link" href="#main-content">Saltar al contenido</a>
+<header class="site-header"><a class="brand" href="index.html"><img src="assets/img/ui/logo.png" alt="" width="54" height="54"/><span>VERB BATTLE<small>Aprende · Practica · Compite</small></span></a><nav class="site-nav" aria-label="Navegación principal"><a href="index.html">Inicio</a><a href="mode-select.html">Modos</a><a href="study.html">Estudio</a><a href="profile.html">Mi progreso</a></nav></header>
+
+  <main id="main-content" class="app-shell">
+    <h1>Examen personalizado</h1>
+    <p id="playerHint" class="small">
+      Escribe las 3 formas en inglés separadas por un espacio:
+      <em>infinitive past past participle</em>.
+      Ejemplo: <strong>go went gone</strong>
+    </p>
+
+    <div>
+      <div class="verb" id="verbDisplay">Verbo (español)</div>
+      <div id="verbImage"></div>
+      <label for="answer">Tu respuesta · tres formas separadas por espacios</label>
+        <input
+        id="answer"
+        placeholder="infinitive pasado participio (separados con espacios)"
+        autocomplete="off"
+      />
+      <div class="small">
+        Tiempo en este verbo: <span class="timer" id="turnTimer">0.0s</span>
+      </div>
+    </div>
+
+    <div class="controls">
+      <button id="submitBtn" class="btn">Enviar</button>
+      <button id="skipBtn" class="btn">
+        Omitir (cuenta como error)
+      </button>
+    </div>
+
+    <div id="feedback" role="status" aria-live="polite" class="small"></div>
+    <div>
+      <strong>Progreso:</strong> <span id="progress">0 / 0</span>
+    </div>
+  </main>
+  
+<footer class="site-footer"><span>VERB BATTLE</span> · Un verbo más, un paso adelante.</footer>
+  <script src="js/game-utils.js?v=ea4417e37819"></script>
+  <script src="js/progression.js?v=36ad1f6ee211"></script>
+  <script src="js/profile-store.js?v=4b922e94d755"></script>
+  <script src="js/exam-play.js?v=5294fb1c781a"></script>
+  <script src="js/achievement-notices.js?v=faeaec19f7c9"></script>
+  <script src="js/responsive-layout.js?v=9f372ad5d68a"></script>
+  <script src="js/pwa.js?v=0de1677da6a0"></script>
+</body>
+</html>

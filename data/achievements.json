@@ -1,0 +1,47 @@
+{
+    "levels": [
+      { "level": 1, "exp_required": 0, "title": "Novato del inglés" },
+      { "level": 2, "exp_required": 100, "title": "Aprendiz valiente" },
+      { "level": 3, "exp_required": 250, "title": "Conjugador casual" },
+      { "level": 4, "exp_required": 500, "title": "Maestro de verbos" },
+      { "level": 5, "exp_required": 1000, "title": "Dios del pasado perfecto" }
+    ],
+    "achievements": [
+      {
+        "id": "first-correct",
+        "name": "¡Primera victoria!",
+        "description": "Responde correctamente tu primer verbo.",
+        "condition": { "correct": 1 },
+        "icon": "🎯"
+      },
+      {
+        "id": "streak-5",
+        "name": "Enrachado",
+        "description": "Responde 5 verbos seguidos sin fallar en una misma partida.",
+        "condition": { "streak": 5 },
+        "icon": "🔥"
+      },
+      {
+        "id": "fast-finger",
+        "name": "Dedos Rápidos",
+        "description": "Responde correctamente en menos de 3 segundos.",
+        "condition": { "response_time": 3 },
+        "icon": "⚡"
+      },
+      {
+        "id": "practice-10",
+        "name": "Estudioso",
+        "description": "Juega 10 rondas en modo práctica.",
+        "condition": { "practice_played": 10 },
+        "icon": "📚"
+      },
+      {
+        "id": "no-mistakes",
+        "name": "Perfecto",
+        "description": "Completa una partida sin errores.",
+        "condition": { "no_mistakes": true },
+        "icon": "💯"
+      }
+    ]
+  }
+  

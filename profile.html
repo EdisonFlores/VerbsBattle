@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  
+  <title>Verb Battle — Perfiles y estadísticas</title>
+  <link rel="icon" href="assets/img/ui/logo.png" type="image/png" />
+
+  <link rel="stylesheet" href="css/vendor/bootstrap-grid.min.css?v=e670c73068b2" />
+  <link rel="stylesheet" href="css/tailwind-built.css?v=110a6c839e7d" />
+  <link rel="stylesheet" href="css/theme.css?v=b381298eb77d" />
+  <meta name="theme-color" content="#ffb34d" />
+  <link rel="manifest" href="manifest.webmanifest" />
+  <link rel="apple-touch-icon" href="assets/icons/icon-180.png" />
+</head>
+<body class="page-profile tw-min-h-screen tw-antialiased">
+<a class="skip-link" href="#main-content">Saltar al contenido</a>
+<header class="site-header"><a class="brand" href="index.html"><img src="assets/img/ui/logo.png" alt="" width="54" height="54"/><span>VERB BATTLE<small>Aprende · Practica · Compite</small></span></a><nav class="site-nav" aria-label="Navegación principal"><a href="index.html">Inicio</a><a href="mode-select.html">Modos</a><a href="study.html">Estudio</a><a href="profile.html" aria-current="page">Mi progreso</a></nav></header>
+
+  <main id="main-content" class="app-shell profile-container">
+    <header>
+      <a href="index.html" class="back-link">← Volver al menú</a>
+      <h1>Perfiles y estadísticas</h1>
+      <p class="muted">Tu progreso se conserva en este navegador. Usa el mismo nombre al volver a jugar.</p>
+    </header>
+    <div class="profile-picker">
+      <label for="profile-select">Jugador</label>
+      <select id="profile-select"></select>
+    </div>
+    <p id="profile-message" role="status" aria-live="polite"></p>
+    <div id="profile-content" hidden>
+      <section class="identity" aria-labelledby="player-name">
+        <img id="profile-avatar" src="assets/img/ui/avatars/avatar-gris.png" alt="" width="72" height="72" />
+        <div><h2 id="player-name"></h2><p class="muted" id="profile-since"></p></div>
+      </section>
+      <section class="panel" aria-labelledby="level-title">
+        <h2 id="level-title">Nivel 1</h2>
+        <p id="xp-summary"></p>
+        <progress id="xp-progress" class="xp-track" max="100" value="0" aria-label="Progreso al siguiente nivel"></progress>
+        <p class="muted" id="xp-next"></p>
+        <p class="muted">+5 XP por forma correcta sin ayuda y +20 XP al terminar una partida de Clásico, Flash o Examen. Estudio no tiene bono de finalización. La experiencia no modifica los puntos del juego.</p>
+      </section>
+      <section class="panel" aria-labelledby="achievements-title">
+        <h2 id="achievements-title">Logros</h2>
+        <p class="muted">Estudioso cuenta rondas de práctica. Los demás logros se obtienen en Clásico, Flash o Examen.</p>
+        <ul id="achievement-list" class="achievement-grid"></ul>
+      </section>
+      <section aria-label="Resumen" class="stats-grid">
+        <div class="stat"><span>Partidas finalizadas</span><strong id="games-played">0</strong></div>
+        <div class="stat"><span>Mejor puntuación · Clásico/Flash</span><strong id="best-score">—</strong></div>
+        <div class="stat"><span>Mejor nota · Examen</span><strong id="best-exam-score">—</strong></div>
+        <div class="stat"><span>Formas correctas</span><strong id="accuracy">—</strong><small id="forms-count"></small></div>
+        <div class="stat"><span>Verbos respondidos</span><strong id="answered-verbs">0</strong></div>
+        <div class="stat"><span>Tiempo promedio por verbo</span><strong id="average-speed">—</strong></div>
+      </section>
+      <section class="panel">
+        <h2>Modos de juego</h2>
+        <p><strong>Más jugado:</strong> <span id="most-played-mode">Ninguno</span></p>
+        <ul id="mode-counts"></ul>
+      </section>
+      <section class="panel">
+        <h2>Estudio y repaso</h2>
+        <p id="practice-stats"></p>
+        <ul id="pending-verbs"></ul>
+        <div class="profile-actions">
+          <a id="review-link" class="button" href="study.html?source=review">Repasar mis errores</a>
+          <a id="study-link" class="button" href="study.html">Estudiar verbos</a>
+        </div>
+        <p class="muted">Un acierto completo sin consultar la respuesta resuelve el pendiente. Los errores históricos se conservan. Estudiar no modifica tus récords ni tu precisión competitiva.</p>
+      </section>
+      <div class="two-columns">
+        <section class="panel"><h2>Verbos más acertados</h2><p class="muted">Respuestas con las tres formas correctas.</p><ul id="most-answered-verbs"></ul></section>
+        <section class="panel"><h2>Verbos con errores</h2><p class="muted">Historial de Clásico, Flash y Examen con al menos una forma incorrecta. La práctica se resume por separado.</p><ul id="missed-verbs"></ul></section>
+      </div>
+      <section class="panel">
+        <h2>Cómo se calculan tus estadísticas</h2>
+        <p class="muted">Las respuestas se guardan al enviarlas, incluso si sales antes de terminar. Las partidas y los récords se registran solo al completar todas las rondas. El promedio incluye respuestas correctas, incorrectas y omisiones del examen.</p>
+        <p class="muted">Una recarga del juego inicia otro intento. Los récords de Clásico/Flash son puntos totales y dependen del número de rondas. Los exámenes se califican sobre 10.</p>
+        <p class="muted">Las estadísticas se registran desde esta actualización. Los resultados antiguos sin un jugador identificable no se atribuyen automáticamente. No hay sincronización entre dispositivos.</p>
+      </section>
+      <div class="profile-actions">
+        <button id="reset-profile" type="button" class="danger">Reiniciar estadísticas, XP y logros de este jugador</button>
+        <a href="index.html" class="button">Volver a jugar</a>
+      </div>
+    </div>
+  </main>
+  
+<footer class="site-footer"><span>VERB BATTLE</span> · Un verbo más, un paso adelante.</footer>
+  <script src="js/game-utils.js?v=ea4417e37819"></script>
+  <script src="js/progression.js?v=36ad1f6ee211"></script>
+  <script src="js/profile-store.js?v=4b922e94d755"></script>
+  <script src="js/profile.js?v=e072de410873"></script>
+  <script src="js/achievement-notices.js?v=faeaec19f7c9"></script>
+  <script src="js/responsive-layout.js?v=9f372ad5d68a"></script>
+  <script src="js/pwa.js?v=0de1677da6a0"></script>
+</body>
+</html>

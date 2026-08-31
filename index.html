@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>Irregular Verb Battle - Inicio</title>
+  
+  <link rel="icon" href="assets/img/ui/logo.png" type="image/png" />
+
+  <link rel="stylesheet" href="css/vendor/bootstrap-grid.min.css?v=e670c73068b2" />
+  <link rel="stylesheet" href="css/tailwind-built.css?v=110a6c839e7d" />
+  <link rel="stylesheet" href="css/theme.css?v=b381298eb77d" />
+  <meta name="theme-color" content="#ffb34d" />
+  <link rel="manifest" href="manifest.webmanifest" />
+  <link rel="apple-touch-icon" href="assets/icons/icon-180.png" />
+</head>
+
+<body class="page-index tw-min-h-screen tw-antialiased">
+<a class="skip-link" href="#main-content">Saltar al contenido</a>
+<header class="site-header"><a class="brand" href="index.html"><img src="assets/img/ui/logo.png" alt="" width="54" height="54"/><span>VERB BATTLE<small>Aprende · Practica · Compite</small></span></a><nav class="site-nav" aria-label="Navegación principal"><a href="index.html" aria-current="page">Inicio</a><a href="mode-select.html">Modos</a><a href="study.html">Estudio</a><a href="profile.html">Mi progreso</a></nav></header>
+
+  <!-- Logo -->
+
+  <!-- Contenido principal -->
+  <main id="main-content" class="app-shell">
+    <section id="welcome-message" class="section-welcome">
+      <h1>¡Bienvenido a Verb Battle!</h1>
+      <p>Introduce los nombres para comenzar la batalla de verbos</p>
+    </section>
+
+    <!-- Formulario de jugadores -->
+    <div id="name-form" class="form-container">
+      <div id="player-count-select">
+        <label>¿Cuántos jugadores?</label>
+        <div class="player-count-btn-group tw-flex tw-flex-wrap tw-gap-3 tw-justify-center">
+          <button class="player-count-btn" data-count="1">1</button>
+          <button class="player-count-btn" data-count="2">2</button>
+          <button class="player-count-btn" data-count="3">3</button>
+          <button class="player-count-btn" data-count="4">4</button>
+        </div>
+      </div>
+
+      <div id="player-inputs-container"></div>
+      <datalist id="saved-player-names"></datalist>
+      <p>Usa el mismo nombre para recuperar tus estadísticas en este navegador.</p>
+
+      <button id="continue-btn" disabled>Continuar</button>
+      <p id="error-message" class="error-message"></p>
+    </div>
+
+    <!-- Modal avatar -->
+    <div id="avatar-modal" role="dialog" aria-modal="true" aria-labelledby="avatar-modal-title">
+      <div>
+        <h3 id="avatar-modal-title">Selecciona un avatar</h3>
+        <div class="avatar-options" id="avatar-options-container"></div>
+        <button id="avatar-confirm-btn" disabled>Confirmar</button>
+        <button id="avatar-cancel-btn" class="secondary">Cancelar</button>
+      </div>
+    </div>
+
+    <!-- Botones extras -->
+    <div class="extras">
+      <button id="credits-btn" class="btn secondary-btn" type="button" aria-expanded="false" aria-controls="about-project">Acerca del proyecto</button>
+      <a href="profile.html" class="btn secondary-btn">Perfiles y estadísticas</a>
+    </div>
+
+    <section id="about-project" class="panel" aria-labelledby="about-project-title" hidden>
+      <h2 id="about-project-title">Acerca del proyecto</h2>
+      <p class="muted">Creador de Verb Battle</p>
+      <h3>Juan Carlos Pashma Segovia</h3>
+      <p>Estudiante de Tecnologías de la Información (TI) en la ESPOCH, sede Morona Santiago.</p>
+      <p>Un proyecto educativo para practicar las formas verbales en inglés mediante distintos modos de juego.</p>
+    </section>
+  </main>
+
+  <!-- Botón ayuda flotante -->
+  <button id="help-button" title="Instrucciones">?</button>
+
+  <!-- Instrucciones -->
+  <div id="help-instructions" style="display:none">
+    <strong>¿Cómo se juega?</strong><br />
+    1. Selecciona la cantidad de jugadores.<br />
+    2. Ingresa sus nombres.<br />
+    3. Haz clic en "Continuar".<br /><br />
+    ¡Que empiece la batalla de verbos!
+  </div>
+
+<footer class="site-footer"><span>VERB BATTLE</span> · Un verbo más, un paso adelante.</footer>
+  <script src="js/game-utils.js?v=ea4417e37819"></script>
+  <script src="js/progression.js?v=36ad1f6ee211"></script>
+  <script src="js/profile-store.js?v=4b922e94d755"></script>
+  <script src="js/index.js?v=738a385c99db"></script>
+  <script src="js/responsive-layout.js?v=9f372ad5d68a"></script>
+  <script src="js/pwa.js?v=0de1677da6a0"></script>
+</body>
+</html>

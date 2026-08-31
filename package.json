@@ -1,0 +1,15 @@
+{
+  "name": "verbsbattle",
+  "version": "6.0.0",
+  "private": true,
+  "description": "Verb Battle — Juan Carlos Pashma Segovia, ESPOCH sede Morona Santiago",
+  "engines": { "node": ">=22" },
+  "scripts": {
+    "test": "node scripts/test.cjs",
+    "check": "node scripts/check-resources.cjs",
+    "build": "node scripts/build.cjs",
+    "verify": "npm test && npm run build",
+    "start": "node scripts/serve.cjs",
+    "preview": "node scripts/serve.cjs dist"
+  }
+}

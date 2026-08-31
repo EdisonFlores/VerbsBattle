@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  
+  <title>Verb Battle — Estudio y repaso</title>
+  <link rel="icon" href="assets/img/ui/logo.png" type="image/png" />
+
+  <link rel="stylesheet" href="css/vendor/bootstrap-grid.min.css?v=e670c73068b2" />
+  <link rel="stylesheet" href="css/tailwind-built.css?v=110a6c839e7d" />
+  <link rel="stylesheet" href="css/theme.css?v=b381298eb77d" />
+  <meta name="theme-color" content="#ffb34d" />
+  <link rel="manifest" href="manifest.webmanifest" />
+  <link rel="apple-touch-icon" href="assets/icons/icon-180.png" />
+</head>
+<body class="page-study tw-min-h-screen tw-antialiased">
+<a class="skip-link" href="#main-content">Saltar al contenido</a>
+<header class="site-header"><a class="brand" href="index.html"><img src="assets/img/ui/logo.png" alt="" width="54" height="54"/><span>VERB BATTLE<small>Aprende · Practica · Compite</small></span></a><nav class="site-nav" aria-label="Navegación principal"><a href="index.html">Inicio</a><a href="mode-select.html">Modos</a><a href="study.html" aria-current="page">Estudio</a><a href="profile.html">Mi progreso</a></nav></header>
+
+  <main id="main-content" class="app-shell profile-container">
+    <a href="index.html">← Volver al menú</a>
+    <h1>Estudio y repaso</h1>
+    <p class="muted">Aprende a tu ritmo, sin cronómetro ni penalizaciones. Cada jugador tiene su propia lista de repaso.</p>
+    <p id="study-message" role="status" aria-live="polite">Cargando verbos…</p>
+    <section id="study-settings" class="panel" hidden>
+      <h2>Prepara tu sesión</h2>
+      <div class="study-filters">
+        <label>Jugador<select id="study-player"></select></label>
+        <label>Lista<select id="study-source"><option value="all">Todos los verbos</option><option value="review">Mis errores pendientes</option></select></label>
+        <label>Dificultad<select id="study-difficulty"><option value="all">Todas</option><option value="facil">Fácil</option><option value="medio">Medio</option><option value="dificil">Difícil</option></select></label>
+        <label>Buscar verbo<input id="study-search" type="search" placeholder="Español o inglés" /></label>
+        <label>Máximo de tarjetas<select id="study-count"><option value="5">5</option><option value="10" selected>10</option><option value="20">20</option></select></label>
+      </div>
+      <p id="study-available"></p>
+      <button id="study-start" type="button">Comenzar sesión</button>
+      <p class="muted">Mostrar una respuesta sirve para estudiar: no concede XP ni resuelve errores. Al responder sin ayuda, ganas 5 XP por forma correcta. Acertar las tres formas retira el verbo de pendientes, sin borrar su historial.</p>
+      <p class="muted">Completa 10 rondas de práctica para desbloquear Estudioso. Las respuestas incorrectas y las omisiones también cuentan como rondas.</p>
+    </section>
+    <section id="study-session" class="panel" hidden aria-labelledby="study-meaning">
+      <p id="study-position"></p>
+      <h2 id="study-meaning"></h2>
+      <form id="study-form">
+        <label for="study-answer">Las tres formas en inglés</label>
+        <input id="study-answer" placeholder="infinitivo pasado participio" autocomplete="off" spellcheck="false" />
+        <div class="profile-actions">
+          <button id="study-check" type="submit">Comprobar</button>
+          <button id="study-reveal" type="button">Ver respuesta</button>
+          <button id="study-skip" type="button">Omitir</button>
+        </div>
+      </form>
+      <p id="study-feedback" role="status" aria-live="polite"></p>
+      <div class="profile-actions">
+        <button id="study-next" type="button" hidden>Siguiente tarjeta</button>
+        <button id="study-end" type="button">Terminar sesión</button>
+      </div>
+    </section>
+    <section id="study-summary" class="panel" hidden aria-labelledby="summary-title">
+      <h2 id="summary-title">Resumen de estudio</h2>
+      <p id="study-result"></p>
+      <div class="profile-actions">
+        <button id="study-again" type="button">Preparar otra sesión</button>
+        <a id="study-profile" class="button" href="profile.html">Ver mi progreso</a>
+      </div>
+    </section>
+  </main>
+  
+<footer class="site-footer"><span>VERB BATTLE</span> · Un verbo más, un paso adelante.</footer>
+  <script src="js/game-utils.js?v=ea4417e37819"></script>
+  <script src="js/progression.js?v=36ad1f6ee211"></script>
+  <script src="js/profile-store.js?v=4b922e94d755"></script>
+  <script src="js/study.js?v=cfeb221887ce"></script>
+  <script src="js/achievement-notices.js?v=faeaec19f7c9"></script>
+  <script src="js/responsive-layout.js?v=9f372ad5d68a"></script>
+  <script src="js/pwa.js?v=0de1677da6a0"></script>
+</body>
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  
+  <title>Irregular Verb Battle – Selección de Modo</title>
+  <link rel="icon" href="assets/img/ui/logo.png" type="image/png" />
+
+  <link rel="stylesheet" href="css/vendor/bootstrap-grid.min.css?v=e670c73068b2" />
+  <link rel="stylesheet" href="css/tailwind-built.css?v=110a6c839e7d" />
+  <link rel="stylesheet" href="css/theme.css?v=b381298eb77d" />
+  <meta name="theme-color" content="#ffb34d" />
+  <link rel="manifest" href="manifest.webmanifest" />
+  <link rel="apple-touch-icon" href="assets/icons/icon-180.png" />
+</head>
+<body class="page-mode-select tw-min-h-screen tw-antialiased">
+<a class="skip-link" href="#main-content">Saltar al contenido</a>
+<header class="site-header"><a class="brand" href="index.html"><img src="assets/img/ui/logo.png" alt="" width="54" height="54"/><span>VERB BATTLE<small>Aprende · Practica · Compite</small></span></a><nav class="site-nav" aria-label="Navegación principal"><a href="index.html">Inicio</a><a href="mode-select.html" aria-current="page">Modos</a><a href="study.html">Estudio</a><a href="profile.html">Mi progreso</a></nav></header>
+
+  <!-- 🔷 Logo fijo -->
+
+  <main id="main-content" class="app-shell">
+    <header>
+      <h1>Verb Battle</h1>
+      <p>Selecciona el modo y la dificultad para comenzar el juego.</p>
+    </header>
+
+    <!-- 🎮 Selección de Modo -->
+    <section class="game-mode">
+      <h2>🎮 Modo de Juego</h2>
+      <div class="modes row row-cols-1 row-cols-md-2 g-3">
+        <div class="col"><button class="btn mode-btn" data-mode="Normal" aria-pressed="false"><strong>Clásico</strong><span>Recuerda y escribe las tres formas. A tu ritmo.</span></button></div>
+       <div class="col"><button class="btn mode-btn" data-mode="Flash" id="flash-mode" aria-pressed="false"><strong>Flash</strong><span>Compite por turnos y desbloquea poderes. Desde 2 jugadores.</span></button></div>
+  <div class="col"><button class="btn mode-btn" data-mode="Examen" aria-pressed="false"><strong>Examen</strong><span>Elige tus verbos y comprueba lo aprendido.</span></button></div>
+  <div class="col"><button class="btn mode-btn" data-mode="Estudio" aria-pressed="false"><strong>Estudio y repaso</strong><span>Aprende sin presión y practica tus errores.</span></button></div>
+  <div class="col"><button class="btn mode-btn" data-mode="Puzzle" aria-pressed="false"><strong>Puzzle</strong><span>Ordena las tarjetas con clic o arrastrándolas.</span></button></div>
+  <div class="col"><button class="btn mode-btn" data-mode="Sorpresa" aria-pressed="false"><strong>Sorpresa</strong><span>Pon a prueba tu memoria con un orden diferente.</span></button></div>
+</div>
+    </section>
+
+    <!-- ⚖️ Selección de Dificultad -->
+    <section class="difficulty">
+      <h2>⚖️ Dificultad</h2>
+      <div class="difficulty-options">
+        <button class="btn diff-btn" data-difficulty="Facil">Fácil</button>
+        <button class="btn diff-btn" data-difficulty="Medio">Medio</button>
+        <button class="btn diff-btn" data-difficulty="Dificil">Difícil</button>
+      </div>
+    </section>
+
+    <!-- 🚀 Botón para comenzar -->
+    <section class="start-game">
+      <button id="start-game" class="btn primary-btn">Iniciar juego</button>
+      <p id="mode-status" role="status" aria-live="polite"></p>
+    </section>
+  </main>
+
+  <!-- ✅ Modal para seleccionar cantidad de verbos -->
+  <div class="vb-overlay" id="verbCountModal">
+    <div class="vb-dialog" role="dialog" aria-modal="true" aria-labelledby="round-count-title">
+      <h2 id="round-count-title">¿Cuántos verbos quieres jugar?</h2>
+      <p>Rondas por jugador. Puedes empezar con 5.</p>
+      <div class="count-options">
+        <button class="count-btn" data-count="5">5</button>
+        <button class="count-btn" data-count="10">10</button>
+        <button class="count-btn" data-count="15">15</button>
+        <button class="count-btn" data-count="20">20</button>
+        <button class="count-btn" data-count="25">25</button>
+      </div>
+      <button id="cancel-round-count" class="secondary" type="button">Volver</button>
+    </div>
+  </div>
+  
+<footer class="site-footer"><span>VERB BATTLE</span> · Un verbo más, un paso adelante.</footer>
+  <script src="js/game-utils.js?v=ea4417e37819"></script>
+  <script src="js/mode.js?v=7918939c50cf"></script>
+  <script src="js/responsive-layout.js?v=9f372ad5d68a"></script>
+  <script src="js/pwa.js?v=0de1677da6a0"></script>
+</body>
+</html>

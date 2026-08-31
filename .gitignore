@@ -1,0 +1,14 @@
+node_modules/
+dist/
+.idea/
+.DS_Store
+Thumbs.db
+*.log
+.netlify/
+.vercel/
+legacy/
+VerbBattle_Shuar/
+.env
+.env.*
+*.pem
+*.key
