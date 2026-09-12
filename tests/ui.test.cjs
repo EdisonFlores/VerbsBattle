@@ -111,9 +111,9 @@ test('Puzzle acepta variantes, registra tiempo y bloquea una segunda corrección
   ui.nodes.get('next-verb').click(); assert.match(ui.nodes.get('round-progress').textContent,/Ronda 2 de 5/);
 });
 
-test('las 12 páginas usan estilos locales y un único sistema visual', () => {
+test('las 13 páginas usan estilos locales y un único sistema visual', () => {
   const pages=fs.readdirSync(root).filter(file=>file.endsWith('.html'));
-  assert.equal(pages.length,12);
+  assert.equal(pages.length,13);
   for(const page of pages) {
     const html=fs.readFileSync(path.join(root,page),'utf8');
     assert.match(html,/css\/theme.css/); assert.match(html,/css\/tailwind-built.css/);
